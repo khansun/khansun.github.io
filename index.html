@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Mahamudur Rahaman Khan, Software Engineer & AI Researcher">
+    <meta name="author" content="Mahamudur Rahaman Khan">
+    <title>Mahamudur Rahaman Khan</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .about, .projects, .contact {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .projects .project {
+            display: inline-block;
+            width: 30%;
+            margin-right: 3%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+        }
+        .projects .project img {
+            width: 100%;
+            height: auto;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact form input,
+        .contact form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mahamudur Rahaman Khan</h1>
+        <p>Machine Learning Engineer | AI Developer | NLP Specialist</p>
+    </header>
+
+    <div class="container">
+
+        <!-- About Section -->
+        <section class="about">
+            <h2 class="section-title">About Me</h2>
+            <p>Hello! I'm Mahamudur Rahaman Khan, a passionate Software Engineer specializing in NLP, Computer Vision, and large language models (LLMs). I have experience developing solutions using frameworks like TensorFlow, PyTorch, and FastAPI. My goal is to create impactful, data-driven solutions that drive innovation in diverse fields such as healthcare and telecommunications.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Project 1">
+                <h3>Smart IVR Solution</h3>
+                <p>Developed a Smart IVR system using ASR, TTS, and Chatbots for automated customer interactions.</p>
+                <a href="https://github.com/yourrepo/smart-ivr" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Project 2">
+                <h3>Seizure Detection using DNN</h3>
+                <p>Created a deep neural network model to detect seizures from EEG data for early diagnosis.</p>
+                <a href="https://github.com/yourrepo/seizure-detection" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/300" alt="Project 3">
+                <h3>RPA Solutions for Telecom</h3>
+                <p>Automated CRM processes using RPA, improving operational efficiency for telecom providers.</p>
+                <a href="https://github.com/yourrepo/rpa-telecom" target="_blank">View Project</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <form action="mailto:youremail@example.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; [Year] Mahamudur Rahaman Khan. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Form validation
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                return false;
+            }
+            alert("Message sent successfully!");
+            return true;
+        }
+
+        // Dynamic Footer year
+        const footerYear = new Date().getFullYear();
+        document.querySelector("footer p").innerHTML = `&copy; ${footerYear} Mahamudur Rahaman Khan. All Rights Reserved.`;
+    </script>
+
+</body>
+
+</html>
