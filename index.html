@@ -4,81 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Mahamudur Rahaman Khan, Software Engineer & AI Researcher">
-    <meta name="author" content="Mahamudur Rahaman Khan">
     <title>Mahamudur Rahaman Khan</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
             color: #333;
         }
+
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+            background-color: #1d72b8;
+            color: white;
+            padding: 30px 20px;
             text-align: center;
         }
+
         header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .about, .projects, .contact {
-            margin-bottom: 40px;
-        }
-        .section-title {
-            font-size: 28px;
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .projects .project {
-            display: inline-block;
-            width: 30%;
-            margin-right: 3%;
-            margin-bottom: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            text-align: center;
-        }
-        .projects .project img {
-            width: 100%;
-            height: auto;
-        }
-        .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact form input,
-        .contact form textarea {
-            padding: 10px;
+            font-size: 3rem;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
         }
-        .contact form button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #333;
-            color: #fff;
-            cursor: pointer;
+
+        header p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
+
+        header a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+            color: #1abc9c;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .contact-info div {
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info div i {
+            color: #1abc9c;
+        }
+
+        .contact-info div strong {
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+            border-bottom: 2px solid #1d72b8;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            /* Increased the minimum width of cards */
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            color: #1d72b8;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            text-decoration: none;
+            background-color: #1d72b8;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #155d8a;
+        }
+
+        .skills,
+        .education,
+        .experience,
+        .publications {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .skills p,
+        .education p,
+        .experience ul,
+        .publications ul {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .skills p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -87,75 +168,115 @@
 
     <header>
         <h1>Mahamudur Rahaman Khan</h1>
-        <p>Machine Learning Engineer | AI Developer | NLP Specialist</p>
+        <div class="contact-info">
+            <div><i class="fas fa-envelope"></i><strong>Email:</strong> <a
+                    href="mailto:mahamudurrahaman@iut-dhaka.edu">mahamudurrahaman@iut-dhaka.edu</a></div>
+            <div><i class="fab fa-linkedin"></i><strong>LinkedIn:</strong> <a
+                    href="https://linkedin.com/in/mahamudur-rahaman-khan" target="_blank">mahamudur-rahaman-khan</a>
+            </div>
+            <div><i class="fab fa-github"></i><strong>GitHub:</strong> <a href="https://github.com/khansun"
+                    target="_blank">khansun</a></div>
+        </div>
     </header>
 
     <div class="container">
 
-        <!-- About Section -->
-        <section class="about">
-            <h2 class="section-title">About Me</h2>
-            <p>Hello! I'm Mahamudur Rahaman Khan, a passionate Software Engineer specializing in NLP, Computer Vision, and large language models (LLMs). I have experience developing solutions using frameworks like TensorFlow, PyTorch, and FastAPI. My goal is to create impactful, data-driven solutions that drive innovation in diverse fields such as healthcare and telecommunications.</p>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project">
-                <img src="https://via.placeholder.com/300" alt="Project 1">
-                <h3>Smart IVR Solution</h3>
-                <p>Developed a Smart IVR system using ASR, TTS, and Chatbots for automated customer interactions.</p>
-                <a href="https://github.com/yourrepo/smart-ivr" target="_blank">View Project</a>
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3><a href="https://github.com/khansun/seizure-detection" target="_blank">Seizure Detection</a></h3>
+                <p><strong>Technologies:</strong> Keras, TensorFlow, Deep Neural Networks, EEG Data</p>
+                <p>Deep neural network solution for seizure detection using EEG data, leveraging time-series
+                    classification for real-time detection.</p>
+                <a href="https://github.com/khansun/seizure-detection" target="_blank">View Project</a>
             </div>
-            <div class="project">
-                <img src="https://via.placeholder.com/300" alt="Project 2">
-                <h3>Seizure Detection using DNN</h3>
-                <p>Created a deep neural network model to detect seizures from EEG data for early diagnosis.</p>
-                <a href="https://github.com/yourrepo/seizure-detection" target="_blank">View Project</a>
-            </div>
-            <div class="project">
-                <img src="https://via.placeholder.com/300" alt="Project 3">
-                <h3>RPA Solutions for Telecom</h3>
-                <p>Automated CRM processes using RPA, improving operational efficiency for telecom providers.</p>
-                <a href="https://github.com/yourrepo/rpa-telecom" target="_blank">View Project</a>
-            </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2 class="section-title">Contact Me</h2>
-            <form action="mailto:youremail@example.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+            <div class="card">
+                <h3><a href="https://github.com/khansun/iDrop" target="_blank">iDrop</a></h3>
+                <p><strong>Technologies:</strong> Spring Boot, SQL, Angular</p>
+                <p>Complaint management system for residential students and supervisors with a role-based ticketing
+                    dashboard.</p>
+                <a href="https://github.com/khansun/iDrop" target="_blank">View Project</a>
+            </div>
 
+            <div class="card">
+                <h3><a href="https://github.com/khansun/SentientMachines" target="_blank">Automated Dustbin System</a>
+                </h3>
+                <p><strong>Technologies:</strong> Arduino, A9G, MG996, MQ-4, US-015</p>
+                <p>Prototype with a motorized lid and SMS alerts for hazardous gases, built on the Arduino platform.</p>
+                <a href="https://github.com/khansun/SentientMachines" target="_blank">View Project</a>
+            </div>
+
+            <div class="card">
+                <h3><a href="https://github.com/khansun/cnn_bangla_ocr" target="_blank">Bangla OCR with CNN</a></h3>
+                <p><strong>Technologies:</strong> OpenCV, NumPy, SciPy, Keras, TensorFlow</p>
+                <p>CNN-based classifier for Bangla handwritten numerals, trained on the CMATERdb dataset with 91%
+                    accuracy.</p>
+                <a href="https://github.com/khansun/cnn_bangla_ocr" target="_blank">View Project</a>
+            </div>
+
+
+        </div>
+
+        <h2>Education</h2>
+        <div class="education">
+            <p><strong>Islamic University of Technology</strong> (Jan 2018 - May 2022)</p>
+            <p>BSc, Software Engineering</p>
+        </div>
+
+        <h2>Experience</h2>
+        <div class="experience">
+            <h3>RedDot Digital Ltd. (Jan 2023 - Present)</h3>
+            <ul>
+                <li>Overhauled the robotic process automation system to support contemporary services.</li>
+                <li>Re-engineered the authentication system utilizing LDAP for cross-platform support.</li>
+                <li>Designed robust ETL pipelines for 150 million users across multiple sources.</li>
+            </ul>
+
+            <h3>Socian AI (Sep 2021 - Dec 2022)</h3>
+            <ul>
+                <li>Enhanced text-to-speech engine performance.</li>
+                <li>Integrated speaker diarisation with ASR solution and improved language modeling proficiency.</li>
+            </ul>
+
+            <h3>HeadBlocks (Feb 2021 - Mar 2021)</h3>
+            <ul>
+                <li>Trained SSD MobileNet v2 using TensorFlow 2 Object Detection API with CUDA support.</li>
+            </ul>
+        </div>
+
+        <h2>Publications</h2>
+        <div class="publications">
+            <ul>
+                <li>
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10088478" target="_blank">
+                        <strong>Sentiment Analysis of COVID-19 Vaccination in Bangla Language</strong>, ICECE 2022
+                    </a>
+                    <p><strong>Abstract:</strong> The vaccination program which helps avert pandemics is facing new
+                        hurdles, including the emergence of hazardous new virus strains and public distrust. Analyzing
+                        the sentiment expressed in social media interactions related to vaccines may aid the health
+                        authority in implementing public safety procedures and guide the government in developing
+                        appropriate policies. The purpose of this research is to identify the public sentiments toward
+                        the COVID-19 vaccination in Bangladesh from social media comments. Comments posted on social
+                        media platforms often mix formal and informal language known as code-mixed text and do not
+                        adhere to any particular grammatical standards. In addition, the Bangla language lacks
+                        computational models and annotated resources for sentiment analysis. To overcome this, we
+                        created CoVaxBD, a Bangla-English code-mixed and sentiment-annotated corpus of Facebook
+                        comments. This paper also proposes a model for sentiment analysis based on the multilingual
+                        BERT. It achieves a validation accuracy of around 97.3 % and a precision score of approximately
+                        97.4%.</p>
+                </li>
+            </ul>
+        </div>
+
+
+        <h2>Skills</h2>
+        <div class="skills">
+            <p><strong>Programming Languages:</strong> Java, SQL, Python, JavaScript, Bash, C++, Kotlin</p>
+            <p><strong>Technologies/Frameworks:</strong> Spring Boot, Angular, Airflow, Kafka, Redis, Docker, Nginx</p>
+            <p><strong>Machine Learning:</strong> TensorFlow, PyTorch, Kaldi, Transformers, LSTM, PCA</p>
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; [Year] Mahamudur Rahaman Khan. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // Form validation
-        function validateForm() {
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-            if (name === "" || email === "" || message === "") {
-                alert("Please fill out all fields.");
-                return false;
-            }
-            alert("Message sent successfully!");
-            return true;
-        }
-
-        // Dynamic Footer year
-        const footerYear = new Date().getFullYear();
-        document.querySelector("footer p").innerHTML = `&copy; ${footerYear} Mahamudur Rahaman Khan. All Rights Reserved.`;
-    </script>
 
 </body>
 
